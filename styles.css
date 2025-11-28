@@ -1,0 +1,6 @@
+﻿body { font-family: sans-serif; max-width: 600px; margin: 20px auto; }
+.phrase { margin: 20px 0; }
+.eng { font-size: 20px; font-weight: bold; }
+.rus { font-size: 18px; color: #555; }
+button { margin: 5px; padding: 8px 12px; }
+label { margin-left: 10px; }
