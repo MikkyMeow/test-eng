@@ -1,6 +1,126 @@
-﻿body { font-family: sans-serif; max-width: 600px; margin: 20px auto; }
-.phrase { margin: 20px 0; }
-.eng { font-size: 20px; font-weight: bold; }
-.rus { font-size: 18px; color: #555; }
-button { margin: 5px; padding: 8px 12px; }
-label { margin-left: 10px; }
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  max-width: 720px;
+  margin: 20px auto;
+  padding: 0 16px 40px;
+}
+
+.phrase {
+  margin: 20px 0;
+  padding: 16px;
+  border-radius: 10px;
+  background: #f5f5f5;
+  border: 1px solid #dcdcdc;
+}
+
+.eng {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.rus {
+  font-size: 18px;
+  color: #555;
+}
+
+.playback-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+button {
+  margin: 5px 0;
+  padding: 8px 14px;
+  border: 1px solid #9aaab5;
+  border-radius: 6px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+label {
+  margin-left: 8px;
+}
+
+.collections-panel {
+  margin-top: 32px;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.collection-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.collection-controls select,
+.collection-controls input {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #c6c6c6;
+  min-width: 150px;
+}
+
+.phrase-editor {
+  margin-top: 20px;
+}
+
+.phrase-editor h2 {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.phrase-list {
+  max-height: 210px;
+  overflow-y: auto;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 8px;
+  background: #fafafa;
+}
+
+.phrase-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 8px;
+  border-bottom: 1px solid #ececec;
+}
+
+.phrase-item:last-child {
+  border-bottom: none;
+}
+
+.phrase-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 14px;
+}
+
+.phrase-editor__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+  align-items: center;
+}
+
+.phrase-editor__row input {
+  flex: 1;
+  min-width: 160px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #c6c6c6;
+}

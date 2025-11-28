@@ -2,26 +2,47 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8" />
-  <title>Аудио-фразы</title>
+  <title>Фразовый тренажёр</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Тупой, но полезный синтезатор</h1>
+  <h1>Слушай, повторяй и сохраняй собственные коллекции фраз</h1>
 
   <div class="phrase">
     <div id="eng" class="eng"></div>
     <div id="rus" class="rus"></div>
   </div>
 
-  <div>
-    <button id="prevBtn">◀ Предыдущая</button>
-    <button id="playPauseBtn">▶ Плей</button>
-    <button id="nextBtn">Следующая ▶</button>
+  <div class="playback-controls">
+    <button id="prevBtn">Назад</button>
+    <button id="playPauseBtn">Говорить</button>
+    <button id="nextBtn">Вперед</button>
     <label>
       <input type="checkbox" id="ruToggle" checked />
-      Озвучивать русский
+      Русская озвучка
     </label>
   </div>
+
+  <section class="collections-panel">
+    <div class="collection-controls">
+      <label for="collectionSelect">Коллекции</label>
+      <select id="collectionSelect"></select>
+      <input id="newCollectionName" placeholder="Новая коллекция" />
+      <button id="addCollectionBtn">Добавить</button>
+      <button id="deleteCollectionBtn">Удалить</button>
+      <button id="saveCollectionBtn">Сохранить</button>
+    </div>
+    <div class="phrase-editor">
+      <h2>Фразы текущей коллекции</h2>
+      <div id="phraseList" class="phrase-list"></div>
+      <div class="phrase-editor__row">
+        <input id="newEngInput" placeholder="English" />
+        <input id="newRusInput" placeholder="Русский" />
+        <button id="addPhraseBtn">Добавить фразу</button>
+      </div>
+    </div>
+  </section>
+
   <script src="script.js"></script>
 </body>
 </html>
