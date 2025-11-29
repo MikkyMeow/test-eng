@@ -293,9 +293,6 @@ function speakCurrentPhrase(options = {}) {
     stopSpeech();
   }
 
-  incrementListenCount(currentCollectionIndex, currentIndex);
-  updatePhraseList();
-
   russianEnabled = ruToggle.checked;
   const phrase = phrases[currentIndex];
   const engUtter = new SpeechSynthesisUtterance(phrase.eng);
@@ -309,6 +306,9 @@ function speakCurrentPhrase(options = {}) {
     pauseUtter.volume = 0;
 
     pauseUtter.onend = () => {
+      incrementListenCount(currentCollectionIndex, currentIndex);
+      updatePhraseList();
+
       if (!hasPhrases()) {
         onPhraseComplete();
         return;
