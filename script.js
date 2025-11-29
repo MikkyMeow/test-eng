@@ -242,6 +242,8 @@ function speakCurrentPhrase(options = {}) {
   isPlaying = true;
   updatePlayButton();
   window.speechSynthesis.speak(engUtter);
+  engUtter.volume = 0;
+  window.SpeechSynthesis.speak(engUtter);
 }
 
 function removePhrase(index) {
